@@ -10,9 +10,9 @@ mysqli_stmt_execute($stmt);
 $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
 ?>
 <div class="card card-body shadow"
-    style="border-top: 5px solid #D40013; /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/">
+    style=" *box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
     <div class="d-flex justify-content-between align-items-center">
-        <h4 class="mb-0">Edit Account</h4>
+        <h4 class="mb-0">Edit Akun</h4>
     </div>
     <hr>
     <form method="POST" action="../process/editAkun.php" autocomplete="off">
