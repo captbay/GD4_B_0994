@@ -61,11 +61,14 @@
             </script>';
         }else{
             // Melakukan insert ke databse dengan query dibawah ini
-            $query = mysqli_query($con,
-            "INSERT INTO users(email, password, name, phonenum, membership)
-            VALUES
-            ('$email', '$password', '$name', '$phonenum', '$membership')")
-            or die(mysqli_error($con)); 
+            $query = mysqli_prepare(
+                $con,
+                "INSERT INTO users(email, password, name, phonenum, membership)
+                VALUES (?, ?, ?, ?, ?);"
+            )
+                or die(mysqli_error($con)); // try-catching error
+            mysqli_stmt_bind_param($query, 'sssss', $email, $password, $name, $phonenum, $membership);
+            mysqli_stmt_execute($query);
             // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
             if($query){
                 echo

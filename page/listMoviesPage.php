@@ -6,21 +6,22 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 0.19);">
     <div class="body d-flex justify-content-between">
         <h4>LIST MOVIE</h4>
+        <a href="./addMoviePage.php" class="btn btn-primary"><i class="fa fa-pencil"></i> ADD Movie</a>
     </div>
-        <hr>
-        <table class="table ">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col">Realese</th>
-                    <th scope="col">Season</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+    <hr>
+    <table class="table ">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Realese</th>
+                <th scope="col">Season</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
                 $query = mysqli_query($con, "SELECT * FROM movies") or
                 die(mysqli_error($con));
 
@@ -45,13 +46,13 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                     }
                 }
                 ?>
-            </tbody>
-        </table>
-    </div>
-    </aside>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    </body>
+        </tbody>
+    </table>
+</div>
+</aside>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+</body>
 
 </html>
