@@ -1,7 +1,5 @@
 <?php 
-    echo
-    '<script>
-    alert("Log out sukses!");
-    window.location = "../index.php"
-    </script>';
+ session_start();
+ session_destroy();
+ header('Location: ../index.php');
 ?>
