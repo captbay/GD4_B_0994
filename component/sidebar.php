@@ -75,6 +75,10 @@
                             <a href="./listMoviesPage.php" style="font-weight:600">List Movie</a>
                         </div>
                         <div class="content-menu">
+                            <i class="fa fa-film"></i>
+                            <a href="./listSeriesPage.php" style="font-weight:600">List Series</a>
+                        </div>
+                        <div class="content-menu">
                             <i class="fa fa-user"></i>
                             <a href="./editAkunPage.php" style="font-weight:600">&nbsp&nbspEdit Profile</a>
                         </div>
